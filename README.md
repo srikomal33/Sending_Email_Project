@@ -126,29 +126,29 @@ The project provides a Django web interface for selecting and sending different 
 
 ### 🏠 Main Web Interface
 
-![Main Web Interface](screenshots/home.png)
+![Main Web Interface](Output/home.png)
 
 ### ✉️ Static Email
 
-![Static Email Output](screenshots/static-email.png)
+![Static Email Output](Output/static-email.png)
 
 ### 📝 Dynamic Email
 
-![Dynamic Email Output](screenshots/dynamic-email.png)
+![Dynamic Email Output](Output/dynamic-email.png)
 
 ### 🎨 Beautiful HTML Email
 
-![Beautiful HTML Email Output](screenshots/beautiful-html-email.png)
+![Beautiful HTML Email Output](Output/beautiful-html-email.png)
 
 ### 📎 Email with Attachment
 
-![Attachment Email Output](screenshots/attachment-email.png)
+![Attachment Email Output](Output/attachment-email.png)
 
 ### ✅ Email Sent Confirmation
 
-![Email Sent Confirmation](screenshots/email-sent.png)
+![Email Sent Confirmation](Output/email-sent.png)
 
-> **Note:** Add your actual screenshots to a `screenshots` folder in the repository using the filenames shown above. GitHub will display them automatically in this section.
+
 
 ## 🎯 Learning Objectives
 
