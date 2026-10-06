@@ -142,7 +142,8 @@ The project provides a Django web interface for selecting and sending different 
 
 ### 📎 Email with Attachment
 
-![Attachment Email Output](Output/attachment-email.png)
+![Attachment Email Output](Output/attachment-email1.png)
+(Output/attachment-email2.png)
 
 ### ✅ Email Sent Confirmation
 
