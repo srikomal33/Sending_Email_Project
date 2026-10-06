@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Sent Successfully</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #eef5ff, #dce9ff);
+        }
+
+        .container {
+            width: 500px;
+            padding: 45px 40px;
+            background: white;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 25px;
+            border-radius: 50%;
+            background: #e8f7ee;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 42px;
+        }
+
+        h1 {
+            color: #222;
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .success {
+            color: #20a464;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .message {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .home-btn {
+            display: inline-block;
+            padding: 13px 28px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .home-btn:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            margin-top: 25px;
+            font-size: 13px;
+            color: #999;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="icon">
+            ✓
+        </div>
+
+        <h1>Email Sent Successfully!</h1>
+
+        <div class="success">
+            Your email has been sent.
+        </div>
+
+        <p class="message">
+            The email was successfully delivered from the
+            Django Email Sender application.
+        </p>
+
+        <a href="/" class="home-btn">
+            ← Go to Home Page
+        </a>
+
+        <div class="footer">
+            Django Email Sender • Email Automation Project
+        </div>
+
+    </div>
+
+</body>
+</html>

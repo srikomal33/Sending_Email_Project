@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Email Sender | Django</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #eef2ff, #f8fafc);
+            min-height: 100vh;
+            color: #1e293b;
+        }
+
+        /* Navbar */
+
+        .navbar {
+            height: 70px;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 8%;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #4f46e5;
+        }
+
+        .logo span {
+            color: #1e293b;
+        }
+
+        .nav-text {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        /* Hero Section */
+
+        .hero {
+            text-align: center;
+            padding: 70px 20px 45px;
+        }
+
+        .hero h1 {
+            font-size: 44px;
+            margin-bottom: 15px;
+            color: #0f172a;
+        }
+
+        .hero h1 span {
+            color: #4f46e5;
+        }
+
+        .hero p {
+            font-size: 17px;
+            color: #64748b;
+            max-width: 650px;
+            margin: auto;
+            line-height: 1.6;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #e0e7ff;
+            color: #4338ca;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* Cards */
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            padding-bottom: 60px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+            transition: 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(15, 23, 42, 0.13);
+        }
+
+        .icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            background: #eef2ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .card h2 {
+            font-size: 21px;
+            margin-bottom: 10px;
+            color: #0f172a;
+        }
+
+        .card p {
+            color: #64748b;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 22px;
+        }
+
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            background: #4f46e5;
+            color: white;
+            padding: 11px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .btn:hover {
+            background: #3730a3;
+        }
+
+        /* Different button colors */
+
+        .dynamic .icon {
+            background: #ecfdf5;
+        }
+
+        .dynamic .btn {
+            background: #059669;
+        }
+
+        .dynamic .btn:hover {
+            background: #047857;
+        }
+
+        .html-email .icon {
+            background: #fff7ed;
+        }
+
+        .html-email .btn {
+            background: #ea580c;
+        }
+
+        .html-email .btn:hover {
+            background: #c2410c;
+        }
+
+        .attachment .icon {
+            background: #fdf2f8;
+        }
+
+        .attachment .btn {
+            background: #db2777;
+        }
+
+        .attachment .btn:hover {
+            background: #be185d;
+        }
+
+        /* Footer */
+
+        footer {
+            background: #0f172a;
+            color: #94a3b8;
+            text-align: center;
+            padding: 25px;
+            font-size: 13px;
+        }
+
+        footer strong {
+            color: white;
+        }
+
+        /* Responsive */
+
+        @media (max-width: 700px) {
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .navbar {
+                padding: 0 5%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            ✉ Email<span>Sender</span>
+        </div>
+
+        <div class="nav-text">
+            Django Email Automation
+        </div>
+
+    </nav>
+
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+
+        <div class="badge">
+            DJANGO PROJECT
+        </div>
+
+        <h1>
+            Welcome to <span>Email Sender</span>
+        </h1>
+
+        <p>
+            A simple Django-based email automation system that demonstrates
+            static emails, dynamic content, HTML emails and email attachments.
+        </p>
+
+    </section>
+
+
+    <!-- Email Options -->
+
+    <div class="container">
+
+        <div class="cards">
+
+            <!-- Static Email -->
+
+            <div class="card">
+
+                <div class="icon">
+                    📩
+                </div>
+
+                <h2>
+                    Static Email
+                </h2>
+
+                <p>
+                    Send a simple predefined email message using
+                    Django's email backend.
+                </p>
+
+                <a href="/staticText" class="btn">
+                    Send Static Email →
+                </a>
+
+            </div>
+
+
+            <!-- Dynamic Email -->
+
+            <div class="card dynamic">
+
+                <div class="icon">
+                    ⚡
+                </div>
+
+                <h2>
+                    Dynamic Email
+                </h2>
+
+                <p>
+                    Send personalized emails using dynamic data
+                    passed from the Django backend.
+                </p>
+
+                <a href="/dynamicText" class="btn">
+                    Send Dynamic Email →
+                </a>
+
+            </div>
+
+
+            <!-- HTML Email -->
+
+            <div class="card html-email">
+
+                <div class="icon">
+                    🎨
+                </div>
+
+                <h2>
+                    Beautiful HTML Email
+                </h2>
+
+                <p>
+                    Send visually attractive emails using HTML,
+                    CSS and Django templates.
+                </p>
+
+                <a href="/beautifulHTML" class="btn">
+                    Send HTML Email →
+                </a>
+
+            </div>
+
+
+            <!-- Attachment Email -->
+
+            <div class="card attachment">
+
+                <div class="icon">
+                    📎
+                </div>
+
+                <h2>
+                    Email with Attachment
+                </h2>
+
+                <p>
+                    Send an HTML email together with a PDF
+                    offer letter as an attachment.
+                </p>
+
+                <a href="/attachmentEmail" class="btn">
+                    Send Attachment →
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            Built with <strong>Django</strong> &nbsp;•&nbsp;
+            Python &nbsp;•&nbsp; HTML &nbsp;•&nbsp; CSS
+        </p>
+
+        <p style="margin-top: 8px;">
+            © 2026 Komal Srivastava
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

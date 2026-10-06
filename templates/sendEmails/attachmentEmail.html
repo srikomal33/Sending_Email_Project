@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Placement Offer</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fb;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333333;
+        }
+
+        .email-container {
+            width: 100%;
+            padding: 40px 0;
+        }
+
+        .email-box {
+            width: 600px;
+            max-width: 90%;
+            margin: auto;
+            background-color: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2563eb, #4f46e5);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        .header p {
+            margin: 8px 0 0;
+            font-size: 15px;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 35px;
+        }
+
+        .content h2 {
+            margin-top: 0;
+            color: #222222;
+            font-size: 24px;
+        }
+
+        .content p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #555555;
+        }
+
+        .details {
+            margin: 25px 0;
+            background-color: #f8fafc;
+            border-left: 5px solid #4f46e5;
+            padding: 20px;
+            border-radius: 6px;
+        }
+
+        .details p {
+            margin: 10px 0;
+            color: #333333;
+        }
+
+        .details strong {
+            color: #111827;
+        }
+
+        .success {
+            text-align: center;
+            background-color: #ecfdf5;
+            color: #047857;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin: 25px 0;
+        }
+
+        .attachment {
+            background-color: #f1f5f9;
+            padding: 18px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .attachment p {
+            margin: 5px 0;
+        }
+
+        .footer {
+            background-color: #f8fafc;
+            text-align: center;
+            padding: 20px;
+            color: #777777;
+            font-size: 13px;
+        }
+
+        .footer p {
+            margin: 5px;
+        }
+
+        @media only screen and (max-width: 600px) {
+
+            .content {
+                padding: 25px;
+            }
+
+            .header h1 {
+                font-size: 25px;
+            }
+
+            .content h2 {
+                font-size: 21px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="email-container">
+
+    <div class="email-box">
+
+        <!-- Header -->
+        <div class="header">
+
+            <h1>Congratulations!</h1>
+
+            <p>Your Placement Journey Begins Here</p>
+
+        </div>
+
+
+        <!-- Main Content -->
+        <div class="content">
+
+            <h2>Dear {{ name }},</h2>
+
+            <p>
+                We are delighted to inform you that you have been
+                <strong>successfully placed</strong> with
+                <strong>{{ organization_name }}</strong>.
+            </p>
+
+            <div class="success">
+                🎉 You have been selected for the position of
+                {{ role }}!
+            </div>
+
+
+            <!-- Job Details -->
+            <div class="details">
+
+                <p>
+                    <strong>Candidate Name:</strong>
+                    {{ name }}
+                </p>
+
+                <p>
+                    <strong>Position:</strong>
+                    {{ role }}
+                </p>
+
+                <p>
+                    <strong>Organization:</strong>
+                    {{ organization_name }}
+                </p>
+
+                <p>
+                    <strong>Status:</strong>
+                    Selected
+                </p>
+
+            </div>
+
+
+            <p>
+                We appreciate your efforts throughout the selection
+                process and look forward to having you join our team.
+            </p>
+
+            <p>
+                Please find your <strong>Offer Letter</strong> attached
+                to this email for your reference.
+            </p>
+
+
+            <!-- Attachment -->
+            <div class="attachment">
+
+                <p>📎 <strong>Attachment</strong></p>
+
+                <p>
+                    Offer_Letter_{{ name }}_Full_Stack_Developer.pdf
+                </p>
+
+            </div>
+
+
+            <p style="margin-top: 30px;">
+                Once again, congratulations on your achievement!
+                We wish you a successful and rewarding career ahead.
+            </p>
+
+            <p>
+                Regards,<br>
+                <strong>HR & Recruitment Team</strong><br>
+                {{ organization_name }}
+            </p>
+
+        </div>
+
+
+        <!-- Footer -->
+        <div class="footer">
+
+            <p>
+                © 2026 {{ organization_name }}
+            </p>
+
+            <p>
+                This is an automated email generated by the
+                Django Email Sender application.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
